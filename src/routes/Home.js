@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { addTodo, deleteToDo } from "../store";
+import { addToDo, deleteToDo } from "../store";
 
 const Home = ({ toDos, dispatchAddToDo, dispatchDeleteToDo }) => {
   const [text, setText] = useState("");
@@ -42,7 +42,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatchAddToDo: (text) => dispatch(addTodo(text)), // addTodo는 store에 생성한 action 생성함수임
+    dispatchAddToDo: (text) => dispatch(addToDo(text)), // addTodo는 store에 생성한 action 생성함수임
     dispatchDeleteToDo: (id) => dispatch(deleteToDo(id)),
   };
 }
